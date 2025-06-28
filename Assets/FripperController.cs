@@ -40,11 +40,11 @@ public class FripperController : MonoBehaviour
         }
 
         //矢印キーが離された時フリッパーを元に戻す
-        if (Keyboard.current.leftArrowKey.wasPressedThisFrame && this.gameObject.CompareTag("LeftFripperTag"))
+        if (Keyboard.current.leftArrowKey.wasReleasedThisFrame && this.gameObject.CompareTag("LeftFripperTag"))
         {
             SetAngle(this.defaultAngle);
         }
-        if (Keyboard.current.rightArrowKey.wasPressedThisFrame && this.gameObject.CompareTag("RightFripperTag"))
+        if (Keyboard.current.rightArrowKey.wasReleasedThisFrame && this.gameObject.CompareTag("RightFripperTag"))
         {
             SetAngle(this.defaultAngle);
         }

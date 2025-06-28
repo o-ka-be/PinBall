@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6761183862364087857}
   - component: {fileID: 1042487514230512380}
   - component: {fileID: 664082659371779472}
+  - component: {fileID: -7128035159541842227}
   m_Layer: 0
   m_Name: SmallStarPrefab
-  m_TagString: Untagged
+  m_TagString: SmallStarTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,3 +111,15 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-7128035159541842227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544041348785017116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f171def9e70744349937d13f314f2ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
