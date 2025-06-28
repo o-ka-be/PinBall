@@ -7,7 +7,7 @@ public class BallController : MonoBehaviour
     // ボールが見える可能性があるz軸の最小値
     private float visiblePosZ = -6.5f;
 
-    //ゲームオーバーを表示する""
+    //ゲームオーバーを表示するテキスト
     private GameObject gameoverText;
 
 
