@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
@@ -10,10 +11,12 @@ public class ScoreText : MonoBehaviour
     public int ScoreLargeStar = 20;
     public int ScoreSmallCloud = 50;
     public int ScoreLargeCloud = 10;
-
     //衝突時に呼ばれる関数
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
+        //衝突したオブジェクトのタグを取得
+        string tag = collision.gameObject.tag;
+
         //SmallStarにぶつかった際の得点加算
         if (tag == "SmallStarTag")
         {
@@ -47,7 +50,6 @@ public class ScoreText : MonoBehaviour
     void Update()
     {
         //Scoretextに現在のスコアを表示する
-        this.scoreText.GetComponent<Text> ().text = "Score" + Score;
-        
+        this.scoreText.GetComponent<Text>().text = "Score:" + Score;
     }
 }
