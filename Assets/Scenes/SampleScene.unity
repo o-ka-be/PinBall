@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 244472520}
   - component: {fileID: 244472519}
   - component: {fileID: 244472524}
+  - component: {fileID: 244472525}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -666,6 +667,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611ef48505c67eb458227d08676af790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &244472525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244472518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78078bcb0fc8e46a930d819ec7d5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: 0
+  ScoreSmallStar: 5
+  ScoreLargeStar: 20
+  ScoreSmallCloud: 50
+  ScoreLargeCloud: 10
 --- !u!1001 &304299742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2202,7 +2220,6 @@ GameObject:
   - component: {fileID: 1829532180}
   - component: {fileID: 1829532182}
   - component: {fileID: 1829532181}
-  - component: {fileID: 1829532183}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -2271,23 +2288,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829532179}
   m_CullTransparentMesh: 1
---- !u!114 &1829532183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829532179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f78078bcb0fc8e46a930d819ec7d5fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Score: 0
-  ScoreSmallStar: 5
-  ScoreLargeStar: 20
-  ScoreSmallCloud: 50
-  ScoreLargeCloud: 10
 --- !u!1 &2000454690
 GameObject:
   m_ObjectHideFlags: 0

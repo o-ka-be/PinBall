@@ -12,8 +12,9 @@ public class ScoreText : MonoBehaviour
     public int ScoreLargeCloud = 10;
 
     //衝突時に呼ばれる関数
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
+        string tag = collision.gameObject.tag;
         //SmallStarにぶつかった際の得点加算
         if (tag == "SmallStarTag")
         {
