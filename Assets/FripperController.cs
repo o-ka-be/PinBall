@@ -28,23 +28,25 @@ public class FripperController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //左矢印キーを押したとき左フリッパーを動かす
-        if (Keyboard.current.leftArrowKey.wasPressedThisFrame && this.gameObject.CompareTag("LeftFripperTag"))
-        {
-            SetAngle(this.flickAngle);
-        }
-        //キーボードの右矢印キーを押したとき右フリッパーを動かす
-        if (Keyboard.current.rightArrowKey.wasPressedThisFrame && this.gameObject.CompareTag("RightFripperTag"))
+        //左矢印キーまたはAキー　またはSキーを押したとき左フリッパーを動かす
+        if ((Keyboard.current.leftArrowKey.wasPressedThisFrame || Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.sKey.wasPressedThisFrame) && this.gameObject.CompareTag("LeftFripperTag"))
         {
             SetAngle(this.flickAngle);
         }
 
-        //矢印キーが離された時フリッパーを元に戻す
-        if (Keyboard.current.leftArrowKey.wasReleasedThisFrame && this.gameObject.CompareTag("LeftFripperTag"))
+
+            //右矢印キーまたはDキー　またはSキーを押したとき右フリッパーを動かす
+            if ((Keyboard.current.rightArrowKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.sKey.wasPressedThisFrame) && this.gameObject.CompareTag("RightFripperTag"))
+            {
+                SetAngle(this.flickAngle);
+            }
+
+        //キーが離された時フリッパーを元に戻す
+        if ((Keyboard.current.leftArrowKey.wasReleasedThisFrame || Keyboard.current.aKey.wasReleasedThisFrame || Keyboard.current.sKey.wasReleasedThisFrame) && this.gameObject.CompareTag("LeftFripperTag"))
         {
             SetAngle(this.defaultAngle);
         }
-        if (Keyboard.current.rightArrowKey.wasReleasedThisFrame && this.gameObject.CompareTag("RightFripperTag"))
+        if ((Keyboard.current.rightArrowKey.wasReleasedThisFrame || Keyboard.current.dKey.wasReleasedThisFrame || Keyboard.current.sKey.wasReleasedThisFrame) && this.gameObject.CompareTag("RightFripperTag"))
         {
             SetAngle(this.defaultAngle);
         }
